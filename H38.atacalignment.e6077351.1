@@ -1,0 +1,208 @@
+TrimmomaticPE: Started with arguments:
+ -threads 128 H38_S9_R1_001.fastq.gz H38_S9_R2_001.fastq.gz pe_read1.fastq se_read1.fastq.gz pe_read2.fastq se_read2.fastq.gz ILLUMINACLIP:/share/samdata/yhliang/genome/adapters/NexteraPE-PE.fa:2:30:8:4:true LEADING:20 TRAILING:20 SLIDINGWINDOW:4:17 MINLEN:30
+java.io.FileNotFoundException: /share/samdata/yhliang/genome/adapters/NexteraPE-PE.fa (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.usadellab.trimmomatic.fasta.FastaParser.parse(FastaParser.java:54)
+	at org.usadellab.trimmomatic.trim.IlluminaClippingTrimmer.loadSequences(IlluminaClippingTrimmer.java:110)
+	at org.usadellab.trimmomatic.trim.IlluminaClippingTrimmer.makeIlluminaClippingTrimmer(IlluminaClippingTrimmer.java:71)
+	at org.usadellab.trimmomatic.trim.TrimmerFactory.makeTrimmer(TrimmerFactory.java:32)
+	at org.usadellab.trimmomatic.Trimmomatic.createTrimmers(Trimmomatic.java:41)
+	at org.usadellab.trimmomatic.TrimmomaticPE.run(TrimmomaticPE.java:529)
+	at org.usadellab.trimmomatic.Trimmomatic.main(Trimmomatic.java:62)
+Quality encoding detected as phred33
+Input Read Pairs: 20825316 Both Surviving: 20245414 (97.22%) Forward Only Surviving: 387412 (1.86%) Reverse Only Surviving: 137440 (0.66%) Dropped: 55050 (0.26%)
+TrimmomaticPE: Completed successfully
+
+                         htslib/1.9
+HTSlib is a C library for reading/writing high-throughput sequencing data.
+Prior to version 1.0, it was part of the Samtools package.
+<http://www.htslib.org/>
+<https://github.com/samtools/htslib>
+
+=-=-=-=-=-=-=
+
+
+                         ncurses/6.1
+The ncurses (new curses) library is a free software emulation of curses in
+System V Release 4.0 (SVr4), and more.  It uses terminfo format, supports
+pads and color and multiple highlights and forms characters and function-key
+mapping, and has all the other SVr4-curses enhancements over BSD curses. 
+SVr4 curses became the basis of X/Open Curses.
+<https://invisible-island.net/ncurses>
+
+=-=-=-=-=-=-=
+
+
+                         samtools/1.9
+Samtools is a suite of programs for interacting with high-throughput
+sequencing data.  It consists of three separate tools & repositories:
+  samtools
+  bcftools
+  htslib
+We have the 1.9 versions of all of these tools available.
+<http://www.htslib.org/doc/samtools.html>
+
+=-=-=-=-=-=-=
+
+20245414 reads; of these:
+  20245414 (100.00%) were paired; of these:
+    15605537 (77.08%) aligned concordantly 0 times
+    4639877 (22.92%) aligned concordantly exactly 1 time
+    0 (0.00%) aligned concordantly >1 times
+    ----
+    15605537 pairs aligned 0 times concordantly or discordantly; of these:
+      31211074 mates make up the pairs; of these:
+        27563199 (88.31%) aligned 0 times
+        3647875 (11.69%) aligned exactly 1 time
+        0 (0.00%) aligned >1 times
+31.93% overall alignment rate
+15605537 reads; of these:
+  15605537 (100.00%) were paired; of these:
+    11618228 (74.45%) aligned concordantly 0 times
+    3497503 (22.41%) aligned concordantly exactly 1 time
+    489806 (3.14%) aligned concordantly >1 times
+    ----
+    11618228 pairs aligned 0 times concordantly or discordantly; of these:
+      23236456 mates make up the pairs; of these:
+        18173704 (78.21%) aligned 0 times
+        3838300 (16.52%) aligned exactly 1 time
+        1224452 (5.27%) aligned >1 times
+41.77% overall alignment rate
+12:54:04.788 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/data/apps/picard/2.18.4/picard.jar!/com/intel/gkl/native/libgkl_compression.so
+[Fri Mar 15 12:54:04 PDT 2019] SortSam INPUT=mappings.uniq.bam OUTPUT=mappings.sorted.bam SORT_ORDER=coordinate    VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Fri Mar 15 12:54:04 PDT 2019] Executing as yhliang@compute-4-53.local on Linux 3.10.107-1.el6.elrepo.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_111-b14; Deflater: Intel; Inflater: Intel; Provider GCS is not available; Picard version: 2.18.4-SNAPSHOT
+INFO	2019-03-15 12:54:51	SortSam	Read    10,000,000 records.  Elapsed time: 00:00:46s.  Time for last 10,000,000:   46s.  Last read position: chr4:165,327,535
+INFO	2019-03-15 12:54:55	SortSam	Finished reading inputs, merging and writing to output now.
+INFO	2019-03-15 12:55:44	SortSam	Wrote    10,000,000 records from a sorting collection.  Elapsed time: 00:01:39s.  Time for last 10,000,000:   47s.  Last read position: chr8:102,394,751
+[Fri Mar 15 12:55:48 PDT 2019] picard.sam.SortSam done. Elapsed time: 1.73 minutes.
+Runtime.totalMemory()=7596408832
+12:55:49.062 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/data/apps/picard/2.18.4/picard.jar!/com/intel/gkl/native/libgkl_compression.so
+[Fri Mar 15 12:55:49 PDT 2019] MarkDuplicates INPUT=[mappings.sorted.bam] OUTPUT=mappings.nodup.bam METRICS_FILE=duplicates_metric.txt REMOVE_DUPLICATES=true    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true ADD_PG_TAG_TO_READS=true ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Fri Mar 15 12:55:49 PDT 2019] Executing as yhliang@compute-4-53.local on Linux 3.10.107-1.el6.elrepo.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_111-b14; Deflater: Intel; Inflater: Intel; Provider GCS is not available; Picard version: 2.18.4-SNAPSHOT
+INFO	2019-03-15 12:55:49	MarkDuplicates	Start of doWork freeMemory: 2038314432; totalMemory: 2058354688; maxMemory: 28631367680
+INFO	2019-03-15 12:55:49	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2019-03-15 12:55:49	MarkDuplicates	Will retain up to 103736839 data points before spilling to disk.
+INFO	2019-03-15 12:55:55	MarkDuplicates	Read     1,000,000 records.  Elapsed time: 00:00:06s.  Time for last 1,000,000:    6s.  Last read position: chr12:12,583,084
+INFO	2019-03-15 12:55:55	MarkDuplicates	Tracking 7937 as yet unmatched pairs. 162 records in RAM.
+INFO	2019-03-15 12:56:00	MarkDuplicates	Read     2,000,000 records.  Elapsed time: 00:00:11s.  Time for last 1,000,000:    4s.  Last read position: chr14:105,293,389
+INFO	2019-03-15 12:56:00	MarkDuplicates	Tracking 12706 as yet unmatched pairs. 541 records in RAM.
+INFO	2019-03-15 12:56:04	MarkDuplicates	Read     3,000,000 records.  Elapsed time: 00:00:14s.  Time for last 1,000,000:    3s.  Last read position: chr18:2,842,294
+INFO	2019-03-15 12:56:04	MarkDuplicates	Tracking 18450 as yet unmatched pairs. 573 records in RAM.
+INFO	2019-03-15 12:56:09	MarkDuplicates	Read     4,000,000 records.  Elapsed time: 00:00:19s.  Time for last 1,000,000:    5s.  Last read position: chr1:633,000
+INFO	2019-03-15 12:56:09	MarkDuplicates	Tracking 51780 as yet unmatched pairs. 31400 records in RAM.
+INFO	2019-03-15 12:56:15	MarkDuplicates	Read     5,000,000 records.  Elapsed time: 00:00:26s.  Time for last 1,000,000:    6s.  Last read position: chr1:205,121,917
+INFO	2019-03-15 12:56:15	MarkDuplicates	Tracking 64913 as yet unmatched pairs. 43568 records in RAM.
+INFO	2019-03-15 12:56:18	MarkDuplicates	Read     6,000,000 records.  Elapsed time: 00:00:29s.  Time for last 1,000,000:    2s.  Last read position: chr2:106,124,349
+INFO	2019-03-15 12:56:18	MarkDuplicates	Tracking 67866 as yet unmatched pairs. 2689 records in RAM.
+INFO	2019-03-15 12:56:22	MarkDuplicates	Read     7,000,000 records.  Elapsed time: 00:00:33s.  Time for last 1,000,000:    3s.  Last read position: chr3:161,602,644
+INFO	2019-03-15 12:56:22	MarkDuplicates	Tracking 73579 as yet unmatched pairs. 3100 records in RAM.
+INFO	2019-03-15 12:56:24	MarkDuplicates	Read     8,000,000 records.  Elapsed time: 00:00:35s.  Time for last 1,000,000:    2s.  Last read position: chr5:128,251,658
+INFO	2019-03-15 12:56:24	MarkDuplicates	Tracking 81477 as yet unmatched pairs. 6425 records in RAM.
+INFO	2019-03-15 12:56:27	MarkDuplicates	Read     9,000,000 records.  Elapsed time: 00:00:38s.  Time for last 1,000,000:    2s.  Last read position: chr6:111,837,865
+INFO	2019-03-15 12:56:27	MarkDuplicates	Tracking 107984 as yet unmatched pairs. 1529 records in RAM.
+INFO	2019-03-15 12:56:36	MarkDuplicates	Read    10,000,000 records.  Elapsed time: 00:00:46s.  Time for last 1,000,000:    8s.  Last read position: chr8:102,394,751
+INFO	2019-03-15 12:56:36	MarkDuplicates	Tracking 111578 as yet unmatched pairs. 820 records in RAM.
+INFO	2019-03-15 12:56:38	MarkDuplicates	Read 10833306 records. 115355 pairs never matched.
+INFO	2019-03-15 12:56:44	MarkDuplicates	After buildSortedReadEndLists freeMemory: 10017935184; totalMemory: 12186550272; maxMemory: 28631367680
+INFO	2019-03-15 12:56:44	MarkDuplicates	Will retain up to 894730240 duplicate indices before spilling to disk.
+INFO	2019-03-15 12:56:45	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2019-03-15 12:56:46	OpticalDuplicateFinder	Large duplicate set. size = 1249
+INFO	2019-03-15 12:56:46	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:21,404
+INFO	2019-03-15 12:56:46	OpticalDuplicateFinder	Large duplicate set. size = 1066
+INFO	2019-03-15 12:56:46	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:11,217
+INFO	2019-03-15 12:56:46	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2019-03-15 12:56:48	MarkDuplicates	Sorting list of duplicate records.
+INFO	2019-03-15 12:56:48	MarkDuplicates	After generateDuplicateIndexes freeMemory: 4840810864; totalMemory: 12186550272; maxMemory: 28631367680
+INFO	2019-03-15 12:56:48	MarkDuplicates	Marking 1492920 records as duplicates.
+INFO	2019-03-15 12:56:48	MarkDuplicates	Found 202 optical duplicate clusters.
+INFO	2019-03-15 12:56:48	MarkDuplicates	Reads are assumed to be ordered by: coordinate
+INFO	2019-03-15 12:58:06	MarkDuplicates	Before output close freeMemory: 20581108672; totalMemory: 20756561920; maxMemory: 28631367680
+INFO	2019-03-15 12:58:06	MarkDuplicates	After output close freeMemory: 20987431872; totalMemory: 21162885120; maxMemory: 28631367680
+[Fri Mar 15 12:58:06 PDT 2019] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 2.29 minutes.
+Runtime.totalMemory()=21162885120
+	Will parse file: shifted_reads.bam
+
+	Creating directory: homer-tags and removing existing *.tags.tsv
+
+	Treating shifted_reads.bam as a bam file
+	Reading alignment file shifted_reads.bam
+
+	Optimizing tag files...
+	Estimated genome size = 3085664902
+	Estimated average read density = 0.001095 per bp
+	Total Tags = 3378353.0
+	Total Positions = 6157097
+	Average tag length = 73.6
+	Median tags per position = 0 (ideal: 1)
+	Average tags per position = 0.077
+	Fragment Length Estimate: 90
+	Peak Width Estimate: 160
+	Autocorrelation quality control metrics:
+		Same strand fold enrichment: 7.0
+		Diff strand fold enrichment: 6.6
+		Same / Diff fold enrichment: 1.0
+
+		Guessing sample is ChIP-Seq or unstranded RNA-Seq - autocorrelation looks good.
+
+13:00:07.713 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/data/apps/picard/2.18.4/picard.jar!/com/intel/gkl/native/libgkl_compression.so
+[Fri Mar 15 13:00:07 PDT 2019] BuildBamIndex INPUT=shifted_reads.bam    VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Fri Mar 15 13:00:07 PDT 2019] Executing as yhliang@compute-4-53.local on Linux 3.10.107-1.el6.elrepo.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_111-b14; Deflater: Intel; Inflater: Intel; Provider GCS is not available; Picard version: 2.18.4-SNAPSHOT
+WARNING: BAM index file /share/samdata/yhliang/19advinformatics/wk6to10/Finalproject/H38/shifted_reads.bai is older than BAM /share/samdata/yhliang/19advinformatics/wk6to10/Finalproject/H38/shifted_reads.bam
+INFO	2019-03-15 13:00:20	BuildBamIndex	Successfully wrote bam index file /share/samdata/yhliang/19advinformatics/wk6to10/Finalproject/H38/shifted_reads.bai
+[Fri Mar 15 13:00:20 PDT 2019] picard.sam.BuildBamIndex done. Elapsed time: 0.22 minutes.
+Runtime.totalMemory()=5743050752
+
+Are you sure you want to clear all loaded modules!? [n] 
+LOADEDMODULES was NOT cleared.
+normalization: RPKM
+bamFilesList: ['shifted_reads.bam']
+binLength: 30
+numberOfSamples: None
+blackListFileName: None
+skipZeroOverZero: False
+defaultFragmentLength: 121
+numberOfProcessors: 128
+verbose: False
+region: None
+bedFile: None
+minMappingQuality: None
+ignoreDuplicates: False
+chrsToSkip: []
+stepSize: 30
+center_read: False
+samFlag_include: None
+samFlag_exclude: None
+minFragmentLength: 0
+maxFragmentLength: 0
+zerosToNans: False
+smoothLength: None
+save_data: False
+out_file_for_raw_data: None
+maxPairedFragmentLength: 484
+normalization: CPM
+bamFilesList: ['shifted_reads.bam']
+binLength: 30
+numberOfSamples: None
+blackListFileName: None
+skipZeroOverZero: False
+defaultFragmentLength: 121
+numberOfProcessors: 128
+verbose: False
+region: None
+bedFile: None
+minMappingQuality: None
+ignoreDuplicates: False
+chrsToSkip: []
+stepSize: 30
+center_read: False
+samFlag_include: None
+samFlag_exclude: None
+minFragmentLength: 0
+maxFragmentLength: 0
+zerosToNans: False
+smoothLength: 90
+save_data: False
+out_file_for_raw_data: None
+maxPairedFragmentLength: 484
